@@ -1,8 +1,12 @@
 // Importing the 'React' module and 'useState' hook from the 'react' library.
-//import React, {useState} from "react";
+import React, {useState} from "react";
 //Import other functions
 import Form from "./Form"
 function AppGroup() {
+
+    const [videoID, setVideoID] = useState("");
+    const [download, setDownload] = useState([]);
+
     
     const getLink = async (link) => {
         console.log(link);
@@ -13,8 +17,15 @@ function AppGroup() {
         
         console.log("video id = ",videoid[1]);
         console.log(videoid[1]);
-        
-        const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoid[1]}`;
+        setVideoID(videoid[1]);
+        } else { 
+        console.log("The youtube url is not valid.");
+        }
+    }
+    
+
+    const getDownload = async (download) => {
+          const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoID}`;
         console.log(url);
         const options = {
             method: 'GET',
@@ -29,34 +40,25 @@ function AppGroup() {
             const result = await response.json();
             console.log(result);
             console.log(result.title);
-            console.log(result.author);
-            console.log(result.thumb);
+            setDownload([download, {title: result.title, downloadlink: result.link}])
             console.log(result.link);
         } catch (error) {
             console.error(error);
         }
-
-
-        } else { 
-            console.log("The youtube url is not valid.");
-        }
-        
-    };
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    return (
+    }
+      
+return (
       <div className="App">
         <Form getLink={getLink}/>
         
       </div>
     );
-  }
+
+        
+        
+    };
+    
+    
+    
   
   export default AppGroup;
