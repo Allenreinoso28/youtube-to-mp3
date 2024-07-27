@@ -18,6 +18,7 @@ function AppGroup() {
         videoID = videoid[1];
         console.log(videoID);
         console.log("video id = ",videoid[1]);
+
         
         
         const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoID}`;
@@ -42,11 +43,13 @@ function AppGroup() {
 
         } catch (error) {
             console.error(error);
+            alert("Invalid Link!");
         }
 
 
         } else { 
             console.log("The youtube url is not valid.");
+            alert("Invalid Link!");
         }
         
     };
