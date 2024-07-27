@@ -1,20 +1,26 @@
 // Importing the 'React' module and 'useState' hook from the 'react' library.
-//import React, {useState} from "react";
+import React, {useState} from "react";
 //Import other functions
-import Form from "./Form"
+import Form from "./Form";
+import Convert from "./Convert";
 function AppGroup() {
-    
+
+    var convert = false;
+    var videoID = "";
+    const [song, setSong] = useState([]);
+
     const getLink = async (link) => {
         console.log(link);
   
         var urlLink = link;
         var videoid = urlLink.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
         if(videoid != null) {
-        
+        videoID = videoid[1];
+        console.log(videoID);
         console.log("video id = ",videoid[1]);
-        console.log(videoid[1]);
         
-        const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoid[1]}`;
+        
+        const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoID}`;
         console.log(url);
         const options = {
             method: 'GET',
@@ -29,9 +35,11 @@ function AppGroup() {
             const result = await response.json();
             console.log(result);
             console.log(result.title);
-            console.log(result.author);
-            console.log(result.thumb);
             console.log(result.link);
+            convert = true;
+            setSong({title: result.title, link: result.link, id: videoID, isConverting: convert})
+            console.log(song);
+
         } catch (error) {
             console.error(error);
         }
@@ -50,11 +58,10 @@ function AppGroup() {
     
     
     
-    
     return (
       <div className="App">
         <Form getLink={getLink}/>
-        
+        <Convert song={song}/>
       </div>
     );
   }

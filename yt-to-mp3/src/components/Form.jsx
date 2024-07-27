@@ -16,7 +16,7 @@ const Form = ({getLink}) => {
 
   return (
     <form className="AppForm" onSubmit={handleSubmit}>
-      <h1><i class="fa-brands fa-square-youtube"></i>
+      <h1><i className="fa-brands fa-square-youtube"></i>
       Youtube to MP3 Converter</h1>
       <input
       type="text"
