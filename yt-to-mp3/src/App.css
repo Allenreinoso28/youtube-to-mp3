@@ -1,23 +1,102 @@
 .App{
     text-align: center;
 }
-form{
-    background-color: rgb(255, 0, 0);
+Form{
+    background-color: #230f01;
+}
+
+.title{
+    font-size: 3em;
+    background-color: #230f01;
+    margin: 0;
+    padding: 1.5em;
+}
+
+.fa-square-youtube{
+    height: 40px;
+    padding: 10px;
 }
 
 .download-btn{
-    background-color: #f44336;
+    background-color: #230f01;
     color: white;
-    padding: 14px 25px;
+    padding: 15px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 12px;
+    border: 1px #918780 solid;
+    font-size: large;
 }
 
 .download-btn:hover{
-background-color: red;
+background-color: #442005;
 }
 
 .download-btn:active{
-    background-color: red;
+    background-color: #442005;
     }
+
+.link-input{
+    color: #756f6b;
+    background-color: white;
+    width: 29em;
+    border: 1px #c8c3c0 solid;
+    padding: 0.8em;
+    outline: none;
+    box-sizing: border-box; 
+    font-size: large;
+    margin-right: 1.5em;
+    border-radius: 12px;
+}
+.submit-btn{
+    color: white;
+    background-color: #230f01;
+    width: 6em;
+    border-radius: 12px;
+    border: 1px #918780 solid;
+    font-size: medium;
+}
+
+.AppForm{
+    color: #363636;
+    background-color: #918780;
+    max-width: 560px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 6px rgba(18, 18, 18, 0.2);
+    margin: 0 auto;
+    margin-top: -22px;
+    padding: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+}
+
+
+
+
+
+.convert-block{
+    color: #363636;
+    background-color: #a09a97;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 6px rgba(18, 18, 18, 0.2);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.thumbnail{
+    padding: 10px;
+    width: 420px;
+    border-radius: 12px;
+}
+
+.song-title{
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 5px;
+}

@@ -15,19 +15,26 @@ const Form = ({getLink}) => {
   };
 
   return (
-    <form className="AppForm" onSubmit={handleSubmit}>
-      <h1><i className="fa-brands fa-square-youtube"></i>
+    <div>
+      <div>
+      <h1 className="title"><i className="fa-brands fa-square-youtube"></i>
       Youtube to MP3 Converter</h1>
-      <input
-      type="text"
-      className="link-input"
-      placeholder="Youtube Link"
-      value={link}
-      onChange={(e) => setLink(e.target.value)}>
-      </input>
-      <button type="submit" className="submit-btn">Convert</button>
-      <div>{link}</div>
-    </form>
+      </div>
+      <div className="Form">
+          <form className="AppForm" onSubmit={handleSubmit}>
+          <input
+          type="text"
+          className="link-input"
+          placeholder="Youtube Link"
+          value={link}
+          onChange={(e) => setLink(e.target.value)}>
+          </input>
+          <button type="submit" className="submit-btn">Convert</button>
+        </form>
+      </div>
+    </div>
+    
+    
     
   );
 };
