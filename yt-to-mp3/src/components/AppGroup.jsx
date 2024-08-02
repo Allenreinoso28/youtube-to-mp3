@@ -1,10 +1,12 @@
 // Importing the 'React' module and 'useState' hook from the 'react' library.
+import 'dotenv/config';
 import React, {useState} from "react";
 //Import other functions
 import Form from "./Form";
 import Convert from "./Convert";
-function AppGroup() {
 
+function AppGroup() {
+    require('dotenv').config();
     var convert = false;
     var videoID = "";
     const [song, setSong] = useState([]);
@@ -26,8 +28,8 @@ function AppGroup() {
         const options = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': 'd93378e5abmshcfcb677c9c44a1cp1f8d79jsn95ace4640607',
-                'x-rapidapi-host': 'youtube-mp36.p.rapidapi.com'
+                'x-rapidapi-key': (process.env.API_KEY),
+                'x-rapidapi-host': (process.env.API_HOST)
             }
         };
         
