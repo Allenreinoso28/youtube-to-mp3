@@ -55,12 +55,6 @@ function AppGroup() {
     };
     
     
-    
-    
-    
-    
-    
-    
     return (
       <div className="App">
         <Form getLink={getLink}/>
