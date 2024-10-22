@@ -29,14 +29,14 @@ YouTube API key
 Install the required packages:
 
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
 ## Usage
 Run the application:
 
 ```bash
-python main.py
+npm start
 ```
 Enter the URL of the YouTube video you wish to convert.
 
