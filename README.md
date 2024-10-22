@@ -4,7 +4,7 @@ This project allows users to convert YouTube videos into MP3 audio files quickly
 
 ## Screencapture
 
-<img src="./yt-to-mp3-SS.PNG" alt="Screencapture of application" width="400" />
+<img src="./yt-to-mp3-SS.PNG" alt="Screencapture of application" width="800" />
 
 ## Features
 
