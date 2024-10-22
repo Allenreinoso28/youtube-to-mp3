@@ -16,32 +16,31 @@ To use this project, clone the repository and install the required dependencies:
 git clone https://github.com/Allenreinoso28/youtube-to-mp3.git
 cd youtube-to-mp3
 ```
-Requirements
+## Requirements
+
 Python 3.x
 YouTube API key
-Dependencies
+
+## Dependencies
 Install the required packages:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-Usage
+```
+
+## Usage
 Run the application:
 
-bash
-Copy code
+```bash
 python main.py
+```
 Enter the URL of the YouTube video you wish to convert.
 
-Choose the output format (MP3).
-
-Wait for the conversion to complete. The audio file will be saved in the designated output directory.
-
-Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss improvements.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-Acknowledgments
+## Acknowledgments
 pytube - For YouTube video downloading capabilities.
